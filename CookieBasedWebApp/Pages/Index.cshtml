@@ -1,0 +1,15 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <h2>@Model.LoggedUserName</h2>
+    <form method="post" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Account/Login")">
+        <input type="submit" value="LogOut"/>
+    </form>
+</div>
+
+
